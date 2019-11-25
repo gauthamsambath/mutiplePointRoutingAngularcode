@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   points=[]
   coordinates=[];
   waypoints:any;
-
+  checkforbranching="this is to see if branching and updation have happened or not"
   constructor(private routeapiservice: RoutingapiserviceService, private zone: NgZone) { }
 
   ngOnInit() {
