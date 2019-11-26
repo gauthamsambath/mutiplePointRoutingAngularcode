@@ -43,6 +43,7 @@ export class AppComponent implements OnInit {
                 })
             })
         })
+      console.log(this.coordinates[0])  
       var coordinates = document.getElementById('coordinates');
       Object.getOwnPropertyDescriptor(map, "accessToken").set('pk.eyJ1IjoiZ2F1dGhhbTk5IiwiYSI6ImNrMzRlMmxrNjE0ZTMzbXBhOWRwdDk1eTcifQ.-ZceQ8jARpf90y0tJnQhoQ');
       let mapp = new map.Map(
