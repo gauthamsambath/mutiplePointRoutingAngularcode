@@ -14,7 +14,7 @@ import { RoutingapiserviceService } from './routingapiservice.service';
 })
 export class AppComponent implements OnInit {
   title = 'Route-Optimizer-Interface';
-  addresses = ["koramangala", "marathahalli", "forum%20mall", "indiranagar%20banglore", "mahadeveapura%20banglore","whitefield%20banglore","jayantinagara%20banglore","koramangala"]
+  addresses = ["koramangala", "marathahalli", "forum%20mall", "nalapad%20banglore", "mahadeveapura%20banglore","whitefield%20banglore","jayantinagara%20banglore","koramangala"]
   jsonresponse;
   allcoordinates;
   points = []
