@@ -8,21 +8,21 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
-
+    
 
   
   <style>
-body { margin:0; padding:0; }
-#map { position:absolute; top:0; bottom:0; width:100%; }
+/* body { margin:0; padding:0; } */
+#map { position:absolute; top:0; bottom:0; width:100%;}
 </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    
+  
+  <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Am645nTS2rVqgDNr8UDKqZPdOL-X2_Z94sS5-GqjNBcoMfSOi_dVC6KTDGxL_jDb' async defer></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
     <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
-    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -49,3 +49,56 @@ body { margin:0; padding:0; }
 
 </body>
 </html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+	<script type='text/javascript'>
+    var map, watchId, userPin;
+
+    function GetMap()
+    {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: "Am645nTS2rVqgDNr8UDKqZPdOL-X2_Z94sS5-GqjNBcoMfSOi_dVC6KTDGxL_jDb"
+        });
+    }
+
+    function StartTracking() {
+        //Add a pushpin to show the user's location.
+        userPin = new Microsoft.Maps.Pushpin(map.getCenter(), { visible: false });
+        map.entities.push(gpsPin);
+
+        //Watch the users location.
+        watchId = navigator.geolocation.watchPosition(UsersLocationUpdated);
+    }8080
+
+    function UsersLocationUpdated(position) {
+        var loc = new Microsoft.Maps.Location(
+                    position.coords.latitude,
+                    position.coords.longitude);
+
+        //Update the user pushpin.
+        userPin.setLocation(loc);
+        userPin.setOptions({ visible: true });
+
+        //Center the map on the user's location.
+        map.setView({ center: loc });
+    }
+
+    function StopTracking() {
+        // Cancel the geolocation updates.
+        navigator.geolocation.clearWatch(watchId);
+
+        //Remove the user pushpin.
+        map.entities.clear();
+    }
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+</head>
+<body>
+    <div id="myMap" style="position:relative;width:600px;height:400px;"></div><br/>
+    <input type="button" value="Start Continuous Tracking" onclick="StartTracking()" />
+    <input type="button" value="Stop Continuous Tracking" onclick="StopTracking()"/>
+</body>
+</html> -->

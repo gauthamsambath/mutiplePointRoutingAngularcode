@@ -27,4 +27,8 @@ export class RoutingapiserviceService {
       }
       return forkJoin(this.waypoints)
     }  
+  public getRoutes(vehicleNumber)
+    {
+      return this.httpclient.get('http://localhost:8091/api/v1/routes/'+vehicleNumber+'/1');
+    }  
 }
